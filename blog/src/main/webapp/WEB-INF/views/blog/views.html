@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Views blog</title>
+</head>
+<body>
+<a href="/blogs">Back to list</a>
+<center>
+    <form th:action="@{/edit-customer}" th:object="${blogs}" method="post">
+        <h1><a th:text="${blogs.title}"></a></h1>
+        <span th:text="${blogs.content}"></span>
+    </form>
+</center>
+</body>
+</html>
